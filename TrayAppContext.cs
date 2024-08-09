@@ -136,6 +136,12 @@ namespace ScreenTranslator
                 // Esegui il riconoscimento del testo
                 string screenshotPath = Path.Combine(Path.GetTempPath(), Path.GetTempFileName().Replace(".tmp",".png"));
                 Bitmap capturedBitmap;
+
+                if (selectionRectangle.Width==0 || selectionRectangle.Height==0)
+                {
+                    return;
+                }
+
                 using (capturedBitmap = new Bitmap(selectionRectangle.Width, selectionRectangle.Height))
                 {
                     using (Graphics g = Graphics.FromImage(capturedBitmap))
