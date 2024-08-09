@@ -259,7 +259,7 @@ namespace ScreenTranslator
                 displayForm.Paint += (s, e) =>
                 {
                     // Inizializza il font e le altre variabili
-                    int fontSize = 16;
+                    int fontSize = 12;
                     Font font = new Font("Arial", fontSize, FontStyle.Bold);
                     SizeF textSize;
                     StringFormat format = new StringFormat
